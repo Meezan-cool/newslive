@@ -1,0 +1,25 @@
+ .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 10vh; */
+    padding: 10px 0px;
+    background: rgb(216, 212, 212);
+    width: 100%;
+    position: sticky;
+    top: 0;
+  }
+   .navbar h1{
+    font-size: 2rem;
+  }
+   .navbar i{
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  .navbar button{
+    background: none;
+    border: none;
+  }
+  .navbar img{
+    width: 130px; 
+  }

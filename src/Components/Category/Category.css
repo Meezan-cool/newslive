@@ -1,0 +1,15 @@
+.categories{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    overflow: scroll;
+    padding: 20px;
+    background: wheat;
+  }
+  .name{
+    padding: 0px 10px; 
+    cursor: pointer;
+  }
+  .categories::-webkit-scrollbar{
+    display: none;
+  }

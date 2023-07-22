@@ -1,0 +1,43 @@
+export const menu=[
+    {
+        id:1,
+        menu_name:'General',
+        url:'/',
+    },
+    {
+        id:2,
+        menu_name:'Business',
+        url:'/business',
+    },
+    {
+        id:3,
+        menu_name:'BBC',
+        url:'/bbc',
+      
+    },
+    {
+        id:4,
+        menu_name:'Health',
+        url:'/health',
+    },
+    {
+        id:5,
+        menu_name:'Science',
+        url:'/science',
+    },
+    {
+        id:6,
+        menu_name:'Sport',
+        url:'/sport',
+    },
+    {
+        id:7,
+        menu_name:'Entertainment',
+        url:'/entertainment',
+    },
+    {
+        id:8,
+        menu_name:'Technology',
+        url:'/technology',
+    },
+]
