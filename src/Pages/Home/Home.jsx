@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios';
-import "./Home.css"
+import "./../Pages.css"
 const Home = () => {
   const [newsData, setNewsData] = useState([]);
  
@@ -9,7 +9,7 @@ const Home = () => {
       try {
         // 'https://newsapi.org/v2/top-headlines?country=us&apiKey=af6d351a9f0e43cb982adf888c04f5f2'
         // const API_KEY = 'af6d351a9f0e43cb982adf888c04f5f2';
-      const response = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=af6d351a9f0e43cb982adf888c04f5f2');
+      const response = await axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=c07892fc401b4060b4d3f0328e4b4786');
         setNewsData(response.data.articles);
         console.log(response.data)
       } catch (error) {
@@ -21,16 +21,23 @@ const Home = () => {
   }, []);
   return (
     <div className='businessContainer'>
-      <h1>General</h1>
-      <div className='Super_Map_container'>
-        {newsData.map((article, index) => (
-          <div className='Map_container' key={index}>
-            <h2><span>{index+1}.</span>{article.title}</h2>
-            <img src={article.urlToImage} alt="" />
-            <p>{article.description}</p>
-            <a href={article.url} target="_blank" rel="noopener noreferrer">
-              Read more
-            </a>
+     <h1>Top <span>20</span> <span>HeadLines</span> </h1>
+      <div className='Super_Map_container1'>
+      {newsData.map((article, index) => (
+          <div className='Map_container1' key={index}>
+           <a href={article.url} target="_blank" >
+          {article.urlToImage ? (
+             <img src={article.urlToImage} alt="" />
+          ) : (
+            <img src={require("./../no-imagee.png")} alt="" />
+          )}
+           <div className='detail'>
+           <h2>{article.title}</h2>
+           
+             {/* <h4> {article.publishedAt.slice(10,11)}, {article.publishedAt.slice(11,16)}, {article.publishedAt.slice(0,10)}</h4> */}
+             <h6> {new Date(article.publishedAt).toGMTString()}</h6>
+           </div>
+          </a>
           </div>
         ))}
       </div>
